@@ -1,0 +1,99 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.menu__container{
+    width: 9em;
+    border: 1px solid black;
+    display:grid;
+    align-items: center;
+}
+
+.menu__black{
+    width: 9em;
+    height: 18em;
+    display: grid;
+    grid-template-rows: repeat(8, 1fr);
+    grid-row: 1;
+    grid-column: 1;
+    z-index: 1;
+}
+
+.menu__white{
+    width: 9em;
+    height: 24em;
+    display: grid;
+    z-index: 0;
+    grid-column: 1;
+    grid-row: 1;
+    grid-template-rows: repeat(8, 1fr);
+}
+
+.menu__button--black{
+    border: 1px solid green;
+}
+
+.menu__button--white{
+    border: 1px solid red;
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 320px auto 320px;
+    grid-template-rows: 162px auto 162px;
+    grid-template-areas: "contenido header header"
+                        "contenido header header"
+                        "contenido footer footer";
+    
+}
+
+.contenido{
+    border: 1px solid black;
+    background-image: url(../assets/mario.png);
+    background-repeat: no-repeat;
+    background-size: auto ;
+    background-position: top center;
+    grid-area: contenido;
+}
+
+.footer{
+    border: 1px solid rgb(255, 0, 0);
+    background-color: aqua;
+    grid-area: footer;
+}
+
+.header{
+    border: 1px solid rgb(255, 0, 0);
+    background-color: rgb(177, 164, 179);
+    grid-area: header;
+}
+
+button{
+    height: 5em;
+    width: 8em;
+    background-color: white;
+    border: 1px solid rgb(255, 0, 0);
+    border-radius: 8px;
+    margin: 0.5em 1em;
+}
+
+button:hover{
+    background-color: aqua;
+    transform: translate(2px, 2px);
+}
+h1, h2, h3{
+    font-size: 3em;
+    padding: 0.5em;
+}
+p{
+    font-size: 2em;
+    padding: 0.5em;
+}
